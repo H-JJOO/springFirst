@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--Bean 등록 (객체등록, (default)싱글톤(객체 하나만))-->
+    <bean id="haman" class="com.koreait.springfirst.HamanSpeaker" scope="prototype"/>
+    <bean id="apple" class="com.koreait.springfirst.AppleSpeaker"/>
+
+    <bean id="lgTv" class="com.koreait.springfirst.LgTv">
+        <constructor-arg ref="apple"></constructor-arg>
+    </bean>
+
+</beans>
